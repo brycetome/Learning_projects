@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>My First Web Page</h1>
+<h4>Loan Calculator</h4>
+
+<form action="/action_page.php">
+    <label for="ir">Interest Rate</label>
+    <input type="number" id="ir" name="ir"><br><br>
+    <label for="loan">Loan Amount</label>
+    <input type="number" id="loan" name="loan"><br><br>
+    <input type="btn" value="btn">
+</form>
+
+<p id="demo"></p>
+
+<script>
+    ir = 0;
+    loanAmount = 0;
+    const calculateBro = (ev)=>{
+        ev.preventDefault();
+        ir = document.getElementById('ir').value;
+        loanAmount = document.getElementById('loan').value;
+
+        document.forms[o].reset();
+
+    }
+
+</script>
+
+
+<p id="demo"></p>
+
+<script>
+
+document.getElementById("demo").innerHTML = ir;
+</script>
+
+</body>
+</html>
