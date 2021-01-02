@@ -3,14 +3,14 @@
 <body>
 
 <h1>My First Web Page</h1>
-<h4>Loan Calculator</h4>
+<h4>Pone Calculator</h4>
 
 <form action="/action_page.php">
     <label for="ir">Interest Rate</label>
     <input type="number" id="ir" name="ir"><br><br>
     <label for="loan">Loan Amount</label>
     <input type="number" id="loan" name="loan"><br><br>
-    <input type="btn" value="btn">
+    <input type="button" id="btn" value="btn">
 </form>
 
 <p id="demo"></p>
@@ -23,12 +23,17 @@
         ir = document.getElementById('ir').value;
         loanAmount = document.getElementById('loan').value;
 
-        document.forms[o].reset();
+        //document.forms[0].reset();
+        console.warn('button clicked')
+
+        document.getElementById("demo").innerHTML = ir+loanAmount;
 
     }
 
+    document.addEventListener('DOMContentLoad', ()=>{
+        document.getElementById('btn').addEventListener('click', calculateBro)
+    });
 
-document.getElementById("demo").innerHTML = ir+loanAmount;
 </script>
 
 
